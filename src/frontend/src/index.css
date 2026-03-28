@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 96.5% 0.005 240;
+    --foreground: 15% 0.02 240;
+    --card: 100% 0 0;
+    --card-foreground: 15% 0.02 240;
+    --popover: 100% 0 0;
+    --popover-foreground: 15% 0.02 240;
+    --primary: 20% 0.03 240;
+    --primary-foreground: 100% 0 0;
+    --secondary: 94% 0.01 240;
+    --secondary-foreground: 20% 0.03 240;
+    --muted: 94% 0.01 240;
+    --muted-foreground: 50% 0.02 240;
+    --accent: 72% 0.14 80;
+    --accent-foreground: 15% 0.02 240;
+    --destructive: 55% 0.22 27;
+    --destructive-foreground: 100% 0 0;
+    --border: 88% 0.01 240;
+    --input: 88% 0.01 240;
+    --ring: 72% 0.14 80;
+    --radius: 0.75rem;
+    --navy: 20% 0.05 240;
+    --gold: 72% 0.14 80;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-poppins;
+    scroll-behavior: smooth;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(15% 0.06 240) 0%,
+    oklch(22% 0.07 240) 40%,
+    oklch(18% 0.05 240) 70%,
+    oklch(12% 0.04 240) 100%
+  );
+}
+
+.hero-pattern {
+  background-image: radial-gradient(
+      circle at 20% 30%,
+      oklch(72% 0.14 80 / 0.12) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      oklch(45% 0.08 240 / 0.2) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 60% 20%,
+      oklch(60% 0.06 240 / 0.15) 0%,
+      transparent 30%
+    );
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, oklch(72% 0.14 80), oklch(80% 0.12 70));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-light {
+  background-color: oklch(96.5% 0.005 240);
+}
+
+.section-white {
+  background-color: oklch(100% 0 0);
+}
+
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px oklch(20% 0.05 240 / 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
